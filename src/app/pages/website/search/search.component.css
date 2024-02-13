@@ -1,0 +1,392 @@
+ p {
+     margin-top: 0;
+     margin-bottom: 0 !important;
+ }
+
+ 
+ 
+
+ 
+
+ .fontSizeWeight {
+     font-size: 13px;
+     font-weight: 200;
+ }
+
+ li {
+     list-style: none;
+ }
+
+ input {
+     -webkit-appearance: none;
+     border-radius: 0;
+     border: 0;
+ }
+
+ input[type=button] {
+     background: #ff3c41;
+     color: #fff;
+     cursor: pointer;
+     font-size: 13px;
+     padding: 8px;
+     text-transform: capitalize;
+     transition: 0.3s;
+
+     &:hover {
+         background-color: #fd3136;
+     }
+ }
+
+ form {
+     margin: 0 auto;
+     width: 90%;
+
+     input:not([type=radio]) {
+         border: 0px solid #ccc;
+         background: #fff;
+         color: #333;
+         font-size: 14px;
+         margin: 8px 0;
+         padding: 3% 2%;
+         width: 100%;
+         transition: 0.3s;
+
+         &:focus {
+             color: #000;
+         }
+     }
+
+     input[type=button] { 
+         color: #fff;
+         font-size: 15px;
+         padding: 8px;
+         width: 100%;
+     }
+
+    select { 
+        color: gray;
+        font-size: 15px;
+        padding: 8px;
+        margin-top: 5px;
+        width: 100%;
+    }
+
+ }
+
+  
+ main {
+     max-width: 1440px;
+     margin: 0 auto;
+ }
+
+ #returnDate {
+     display: none;
+ }
+
+ header {
+     background: #fff;
+     text-align: center;
+
+     .planIc {
+         color: #000;
+         font-size: 40px;
+     }
+ }
+
+ .radio-toolbar {
+     position: absolute;
+     top: -36px;
+     left: 0;
+
+     input[type="radio"] {
+         display: none;
+     }
+
+     label {
+
+         cursor: pointer;
+         display: inline-block;
+         padding: 10px 20px;
+         transition: all .3s;
+
+     }
+
+     label[for="radioRoundTrip"] {
+         margin-left: -3px;
+     }
+
+     input[type="radio"]:checked+label {
+         background-color: #333;
+     }
+ }
+
+ .styled-checkbox {
+     position: absolute;
+     opacity: 0;
+     transition: all .3s;
+
+     +label {
+         font-size: 14px;
+         cursor: pointer;
+         position: relative;
+         padding: 0;
+     }
+
+     +label:before {
+         background: #ccc;
+         display: inline-block;
+         content: '';
+         height: 20px;
+         margin-right: 10px;
+         vertical-align: text-top;
+         width: 20px;
+     }
+
+
+     &:checked+label:after {
+         background: white;
+         box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+         -webkit-transform: rotate(45deg);
+         content: '';
+         height: 2px;
+         left: 5px;
+         top: 9px;
+         position: absolute;
+         width: 2px;
+         transform: rotate(45deg);
+     }
+ }
+
+ #bodyCotainer {
+     padding-top: 50px;
+     overflow: hidden;
+ }
+
+ .filterSearchFilter {
+     float: left;
+     margin-left: 4%;
+     width: 26%;
+
+     #flightSearch {
+         background: #333;
+         box-sizing: border-box;
+         padding: 2%;
+         position: relative;
+
+         div {
+             font-size: 13px;
+             font-weight: 400;
+             color: #fff;
+         }
+     }
+
+     .showFilter {
+         background: #fff;
+         box-sizing: border-box;
+         margin: 5% 0;
+
+         h4 {
+             padding: 5% 5% 0;
+             font-size: 14px;
+             font-weight: 500;
+         }
+
+         ul {
+             padding: 0 5% 5%;
+
+             li {
+                 margin: 4% 0;
+
+                 &:last-child {
+                     margin-bottom: 0;
+                 }
+             }
+         }
+     }
+ }
+
+ .sourceDesination {
+     position: relative;
+
+     ul {
+         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+         display: none;
+         border: 1px solid #ccc;
+         left: 0.2%;
+         position: absolute;
+         width: 90%;
+         top: 84%;
+         z-index: 99;
+
+         li {
+             background: #fff;
+             color: #555;
+             cursor: pointer;
+             padding: 8px 5px;
+         }
+     }
+ }
+
+ #FlightResult {
+     float: left;
+     width: 70%;
+
+     .flightOnward,
+     .flightReturn {
+         display: none;
+     }
+
+     table {
+         border-collapse: collapse;
+         text-align: left;
+         width: 100%;
+         table-layout: fixed;
+
+         thead {
+             border-bottom: 5px solid #fff;
+
+             th {
+                 color: #555;
+                 padding-left: 9px; 
+
+                 i {
+                     cursor: pointer;
+                     font-size: 11px;
+                     padding-left: 3px;
+                 }
+
+                 &:last-child {
+                     cursor: pointer;
+                 }
+             }
+         }
+
+         tbody {
+             tr {
+                 background: #f7f7f7;
+                 border-bottom: 10px solid #fff;
+
+                 td {
+                     color: #333;
+                     font-size: 13px;
+                     padding: 12px;
+                     margin-bottom: 5px;
+
+                     i {
+                         color: #888;
+                         cursor: pointer;
+                         font-size: 8px;
+                         padding: 0 4px;
+                     }
+
+                     .bookTicBtn {
+                         font-size: 10px;
+                     }
+                 }
+             }
+         }
+     }
+ }
+
+ .form-control {
+     border: 1px solid black !important;
+ }
+
+ .form-select {
+     border: 1px solid black !important;
+ }
+
+ .rounded-btn {
+     border-radius: 20px;
+ }
+
+ .navbar {
+     background-color: #1e6a99 !important;
+     color: white !important;
+ }
+
+ .card-body {
+     border: 1px solid gray !important;
+ }
+
+ .beforeSearch {
+     background: #fff;
+     color: #555;
+     font-size: 16px;
+     width: 70%;
+     margin: 0 auto;
+     padding: 2%;
+     text-align: center;
+
+     i {
+         color: #555;
+         font-size: 45px;
+         vertical-align: middle;
+         margin-right: 12px;
+     }
+ }
+
+ .flightResultWrapper {
+     border: 1px solid #e4e4e4;
+     box-sizing: border-box;
+     background: #fff;
+     padding: 5%;
+     position: relative;
+     margin: 0 auto 1%;
+     width: 90%;
+
+     .overLay {
+         background: #fff;
+         bottom: 0;
+         left: 0;
+         opacity: 0.7;
+         position: absolute;
+         right: 0;
+         top: 0;
+         width: 100%;
+         z-index: 99;
+     }
+
+     .flightResultHeader {
+         align-items: center;
+         display: flex;
+         margin-bottom: 20px;
+         overflow: hidden;
+
+         h4 {
+             color: #333;
+             font-size: 21px;
+             font-weight: 500;
+             text-transform: capitalize;
+         }
+
+         p {
+             color: #888;
+             font-size: 12px;
+         }
+
+         >div {
+             +div {
+                 margin-left: 3%;
+             }
+         }
+
+         .exchangeIc {
+             color: #888;
+             font-size: 20px;
+         }
+     }
+ }
+
+ form input[type=button] {
+     background: #ff3c41;
+     color: #fff;
+     font-size: 15px;
+     padding: 8px;
+     width: 100%;
+ }
+
+ .logo {
+     width: 32px;
+     height: 32px;
+ }

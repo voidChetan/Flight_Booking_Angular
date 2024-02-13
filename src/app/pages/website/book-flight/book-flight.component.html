@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-12 text-end">
+        <button class="btn btn-success" (click)="addNew()">Add New</button> 
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Name</th>
+                    <th>Contact No</th>
+                    <th>Aadhar Ni</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let city of passendgerlist;let sr= index">
+                    <td>
+                        {{sr+1}}
+                    </td>
+                    <td>
+                        <input type="text" [(ngModel)]="city.travelerName" placeholder="Enter" />
+                    </td>
+                    <td>
+                        <input type="text" [(ngModel)]="city.contactNo" placeholder="Enter " />
+                    </td>
+                    <td>
+                        <input type="text" [(ngModel)]="city.aadharNo" placeholder="Enter" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
